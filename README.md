@@ -6,6 +6,7 @@
 ## What is Design Structure Matrix?
 
 **D**esign **S**tructure **M**atrix (**DSM**), also called **D**ependency **S**tructure **M**atrix, is a simple and useful method to represent complex system architectures or projects. 
+
 https://en.wikipedia.org/wiki/Design_structure_matrix
 
 
@@ -13,7 +14,6 @@ https://en.wikipedia.org/wiki/Design_structure_matrix
 
 This package, DesignStructureMatrix offers tools for displaying and analysing DSM.
 For now, plotting DSM, clustering DSM and sequencing DSM are available.
- plotting, clustering 
 
 ## Installation
 
