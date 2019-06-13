@@ -16,9 +16,11 @@ This package, DesignStructureMatrix offers tools for displaying and analysing DS
 ## Installation
 
 In Pkg mode(Please hit `]`)
+
 `(v1.1) pkg> add https://github.com/Otepipi/DesignStructureMatrix.jl`
 
 When you use this package, please type
+
 `julia> using DesignStructureMatrix`
 
 ## Displaying DSM
@@ -68,6 +70,7 @@ To display DSM, please type
 plotDSM(A,label)
 ```
 then
+
 ![](https://user-images.githubusercontent.com/35882132/59391598-bf501300-8daf-11e9-923b-72509125d567.png)
 
 
@@ -75,7 +78,7 @@ then
 
 One of useful ways for analysing DSM is Clustering.
 
-Original DSM is here
+Original DSM is below
 ```julia
 original_DSM = [ 0 1 0 0 1 1 0;
                 0 0 0 1 0 0 1;
@@ -91,6 +94,7 @@ plotDSM(original_DSM,original_label)
 
 ```
 original_DSM
+
 ![ClusteroriginalDSM](https://user-images.githubusercontent.com/35882132/59392360-54eca200-8db2-11e9-8fa3-6062f31045e5.png)
 
 
@@ -111,7 +115,7 @@ then, you get clustered DSM
 
 Another way for analysing DSM is seaquencing.
 
-Original DSM is here
+Original DSM is below
 ``` julia
 original_DSM = [0 0 0 0 0 0 0 0 0 0 0 0 0;
                 0 0 0 1 0 0 0 0 0 0 0 0 0;
@@ -134,7 +138,8 @@ original_label = ["1", "2", "3", "4", "5", "6", "7", "8",
 plotDSM(original_DSM,original_label)
 
 ```
-original DSM is here
+original DSM 
+
 ![SequencingoriginalDSM](https://user-images.githubusercontent.com/35882132/59393683-9cc1f800-8db7-11e9-9bb5-f2af79c7f7e9.png)
 
 To get Sequenced DSM, please type
@@ -150,4 +155,18 @@ then, you get sequenced DSM
 ![SequencedDSM](https://user-images.githubusercontent.com/35882132/59393832-2d003d00-8db8-11e9-9147-cad34b77a2c7.png)
 
 
-##Refe
+## Reference
+
+#### Clustering algorithm
+
+>Figueiredo Damásio, J., Almeida Bittencourt, R., Dario, D., & Guerrero, S. (n.d.). Recovery of Architecture Module Views using an Optimized Algorithm Based on Design Structure Matrices. Retrieved from https://arxiv.org/ftp/arxiv/papers/1709/1709.07538.pdf
+
+#### Sequencing algorithm
+
+>Warfield, J. N. (1973). Binary Matrices in System Modeling. IEEE Transactions on Systems, Man and Cybernetics, 3(5), 441–449. https://doi.org/10.1109/TSMC.1973.4309270
+
+
+And original DSM in chapter `Sequencing DSM` is from the below article
+
+
+>Yassine, A. A. (2004). An Introduction to Modeling and Analyzing Complex Product Development Processes Using the Design Structure Matrix ( DSM ) Method. Urbana, (January 2004), 1–17. Retrieved from http://ie406.cankaya.edu.tr/uploads/files/Modeling and Analyzing Complex Product Development Processes Using the Design Structure Matrix.pdf
