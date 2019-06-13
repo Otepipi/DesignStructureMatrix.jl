@@ -32,7 +32,7 @@ function toReachableMatrix(DSM)
     for i  = 1 : calcmax
         
 
-        R1 = (DSM+I)^i
+        global R1 = (DSM+I)^i
         (Rindex) =findall(x-> 1<x , R1);
         R1[Rindex] = ones(size(Rindex)); 
 
