@@ -6,14 +6,14 @@ using LinearAlgebra
 export plotDSM
 export toReachableMatrix
 export OrderReachable
-export Seaqencing
+export Sequencing
 export Clustering
 
 ## plot DSM
 function plotDSM(DSM,label)
 
     cDSM = copy(DSM);
-
+nokonoko1
     cDSM[diagind(cDSM)] .= -1
     
      spy(cDSM, Scale.y_discrete(labels = i->label[i]), Scale.x_discrete(labels = i->label[i]),
@@ -89,8 +89,8 @@ function OrderReachable(Reachable)
     
 end
 
-    ## Seaqencing DSM
-function Seaqencing(DSM,label)
+    ## Sequencing DSM
+function Sequencing(DSM,label)
     cDSM = copy(DSM);
     clabel = copy(label);
     
@@ -98,10 +98,10 @@ function Seaqencing(DSM,label)
 
     (OrderedReachable,level) = OrderReachable(Reachable);
 
-    SeaqencedDSM = cDSM[level,level];
-    Seaqencedlabel = clabel[level];
+    SequencedDSM = cDSM[level,level];
+    Sequencedlabel = clabel[level];
 
-    return SeaqencedDSM, Seaqencedlabel
+    return SequencedDSM, Sequencedlabel
 
 end
 
