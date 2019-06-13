@@ -1,6 +1,45 @@
 using DesignStructureMatrix
 using Test
 
-@testset "DesignStructureMatrix.jl" begin
-    # Write your own tests here.
+@testset "Clustering" begin
+ DSM =[ 0 1 0 0 1 1 0;
+    0 0 0 1 0 0 1;
+    0 1 0 1 0 0 1;
+    0 1 1 0 1 0 1;
+    0 0 0 1 0 1 0;
+    1 0 0 0 1 0 0;
+    0 1 1 1 0 0 0];
+
+    label = ["A","B","C","D","E","F","G"];
+
+    A,labelA = Clustering(DSM,label)
+
+        @test A[1,1] == 0
+        @test A[7,7] == 0
+
+end
+
+@testset "Sequencing" begin
+
+         DSM = [0 0 0 0 0 0 0 0 0 0 0 0 0;
+                0 0 0 1 0 0 0 0 0 0 0 0 0;
+                1 0 0 1 1 0 0 1 0 1 0 0 1;
+                1 0 0 0 0 0 0 0 0 0 0 0 0;
+                1 1 1 1 0 0 1 1 0 1 1 0 1;
+                0 1 0 0 0 0 0 0 1 0 0 0 0;
+                0 0 1 1 1 0 0 1 0 1 0 0 1;
+                0 1 0 1 0 0 0 0 0 1 0 0 0;
+                0 0 1 1 0 0 0 0 0 1 0 0 1;
+                0 1 0 1 0 0 0 1 0 0 0 0 0;
+                0 0 1 1 1 0 0 1 0 1 0 0 1;
+                0 0 0 0 0 0 0 0 0 0 0 0 1;
+                0 1 1 1 1 0 1 1 1 1 1 1 0];
+
+        label = ["1", "2", "3", "4", "5", "6", "7", "8", 
+                "9", "10", "11", "12", "13"];
+
+        A,labelA = Sequencing(DSM,label)
+
+    @test labelA == ["1","4","2","8","10","3","5","7","9","11","12","13","6"]
+
 end
