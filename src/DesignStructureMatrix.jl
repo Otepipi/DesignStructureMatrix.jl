@@ -13,7 +13,6 @@ export Clustering
 function plotDSM(DSM,label)
 
     cDSM = copy(DSM);
-nokonoko1
     cDSM[diagind(cDSM)] .= -1
     
      spy(cDSM, Scale.y_discrete(labels = i->label[i]), Scale.x_discrete(labels = i->label[i]),
@@ -35,11 +34,11 @@ function toReachableMatrix(DSM)
 
        global R1 = (DSM+I)^i
         (Rindex) =findall(x-> 1<x , R1);
-        R1[Rindex] = ones(size(Rindex)); #ブール演算のかわり
+        R1[Rindex] = ones(size(Rindex)); 
 
         R2 = (DSM+I)^(i+1)
         (Rindex) =findall(x-> 1<x , R2);
-        R2[Rindex] = ones(size(Rindex)); #ブール演算のかわり
+        R2[Rindex] = ones(size(Rindex)); 
 
         if R1 == R2
             break
@@ -227,9 +226,9 @@ function Clustering(DSM,label)
         Order = [Order ; findall(x-> x == 1 , reorderedCluster[i,:])]
     end
     
-    I =zeros(DSMsize,DSMsize) + Diagonal(ones(DSMsize,DSMsize)) #単位行列の作成
-    P =zeros(DSMsize,DSMsize) + Diagonal(ones(DSMsize,DSMsize)) #置換行列の作成 
-    Clusteredlabel = copy(original_label) #ラベルも並べ替える
+    I =zeros(DSMsize,DSMsize) + Diagonal(ones(DSMsize,DSMsize)) 
+    P =zeros(DSMsize,DSMsize) + Diagonal(ones(DSMsize,DSMsize)) 
+    Clusteredlabel = copy(original_label) 
     copylabel= copy(original_label)
     
     for i = 1 : DSMsize
