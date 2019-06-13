@@ -1,4 +1,4 @@
-# DesignStructureMatrix
+# DesignStructureMatrix.jl
 [![Build Status](https://travis-ci.com/Otepipi/DesignStructureMatrix.jl.svg?branch=master)](https://travis-ci.com/Otepipi/DesignStructureMatrix.jl)
 [![Codecov](https://codecov.io/gh/Otepipi/DesignStructureMatrix.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/Otepipi/DesignStructureMatrix.jl)
 [![Coveralls](https://coveralls.io/repos/github/Otepipi/DesignStructureMatrix.jl/badge.svg?branch=master)](https://coveralls.io/github/Otepipi/DesignStructureMatrix.jl?branch=master)
@@ -10,7 +10,7 @@
 https://en.wikipedia.org/wiki/Design_structure_matrix
 
 
-## What is DesignStructureMarix.jl
+## What is DesignStructureMarix.jl?
 
 This package, DesignStructureMatrix offers tools for displaying and analysing DSM.
 For now, plotting DSM, clustering DSM and sequencing DSM are available.
