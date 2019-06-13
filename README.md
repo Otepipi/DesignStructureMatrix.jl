@@ -5,13 +5,15 @@
 
 ## What is Design Structure Matrix?
 
-**D**esign **S**tructure **M**atrix(**DSM**) is a simple and useful method to represent complex system architectures or projects. 
+**D**esign **S**tructure **M**atrix (**DSM**), also called **D**ependency **S**tructure **M**atrix, is a simple and useful method to represent complex system architectures or projects. 
 https://en.wikipedia.org/wiki/Design_structure_matrix
 
 
 ## What is DesignStructureMarix.jl
 
-This package, DesignStructureMatrix offers tools for displaying and analysing DSM. 
+This package, DesignStructureMatrix offers tools for displaying and analysing DSM.
+For now, plotting DSM, clustering DSM and sequencing DSM are available.
+ plotting, clustering 
 
 ## Installation
 
@@ -153,6 +155,19 @@ plotDSM(sequenced_DSM, sequenced_label)
 then, you get sequenced DSM
 
 ![SequencedDSM](https://user-images.githubusercontent.com/35882132/59393832-2d003d00-8db8-11e9-9147-cad34b77a2c7.png)
+
+
+
+## Future
+
+* Improve plotting DSM 
+* Implement Other algorithm for clustering DSM
+* Implement Other algorithm for sequencing DSM
+* Display **D**omain **M**apping **M**atrices (**DMMs**), and **M**ulti**D**omain **M**atrices (**MDMs**)
+
+## Dependency packages
+* Gadfly.jl
+* LinearLinearAlgebra.jl
 
 
 ## Reference
