@@ -26,13 +26,13 @@ end
 function toReachableMatrix(DSM)
 
     I = zeros(Int64,size(DSM)) + Diagonal(ones(Int64,size(DSM))); #identity matrix
-
+    R1 = zeros(Int64,size(DSM))
     calcmax = 1000
 
     for i  = 1 : calcmax
         
 
-        global R1 = (DSM+I)^i
+        R1 = (DSM+I)^i
         (Rindex) =findall(x-> 1<x , R1);
         R1[Rindex] = ones(size(Rindex)); 
 
