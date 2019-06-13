@@ -9,7 +9,7 @@ export OrderReachable
 export Sequencing
 export Clustering
 
-## plot DSM
+## plot DSM by using Gadfly
 function plotDSM(DSM,label)
 
     cDSM = copy(DSM);
@@ -25,14 +25,14 @@ end
 ## convert DSM to ReachableMatrix
 function toReachableMatrix(DSM)
 
-    I = zeros(Int64,size(DSM)) + Diagonal(ones(Int64,size(DSM))); #単位行列の生成
+    I = zeros(Int64,size(DSM)) + Diagonal(ones(Int64,size(DSM))); #identity matrix
 
     calcmax = 1000
 
     for i  = 1 : calcmax
         
 
-       global R1 = (DSM+I)^i
+        R1 = (DSM+I)^i
         (Rindex) =findall(x-> 1<x , R1);
         R1[Rindex] = ones(size(Rindex)); 
 
@@ -88,7 +88,8 @@ function OrderReachable(Reachable)
     
 end
 
-    ## Sequencing DSM
+    
+## Sequencing DSM
 function Sequencing(DSM,label)
     cDSM = copy(DSM);
     clabel = copy(label);
@@ -213,8 +214,6 @@ function Clustering(DSM,label)
         costlist[i] = newCost
     end
     
-    Clustermatrix
-    costlist'
     
     orderCluster = [sum(Clustermatrix,dims=2) Clustermatrix]
     orderedCluster = sortslices(orderCluster,dims = 1, rev=true)
@@ -226,16 +225,19 @@ function Clustering(DSM,label)
         Order = [Order ; findall(x-> x == 1 , reorderedCluster[i,:])]
     end
     
+    ## reorder DSM 
     I =zeros(DSMsize,DSMsize) + Diagonal(ones(DSMsize,DSMsize)) 
     P =zeros(DSMsize,DSMsize) + Diagonal(ones(DSMsize,DSMsize)) 
     Clusteredlabel = copy(original_label) 
     copylabel= copy(original_label)
     
+    ## Permutation matrix
     for i = 1 : DSMsize
         P[i,:] = I[Order[i],:]
         Clusteredlabel[i] = copylabel[Order[i]]
     end
     
+    ## order DSM
     ClusteredDSM = P*original_DSM*P' 
     
     return ClusteredDSM, Clusteredlabel;
