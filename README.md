@@ -17,9 +17,9 @@ For now, plotting DSM, clustering DSM and sequencing DSM are available.
 
 ## Installation
 
-In Pkg mode(Please hit `]`)
+In Pkg mode( Please hit `]`)
 
-`(v1.1) pkg> add https://github.com/Otepipi/DesignStructureMatrix.jl`
+`(v1.1) pkg> add DesignStructureMatrix`
 
 When you use this package, please type
 
