@@ -5,7 +5,7 @@
 
 ## What is Design Structure Matrix?
 
-**D**esign **S**tructure **M**atrix (**DSM**), also called **D**ependency **S**tructure **M**atrix, is a simple and useful method to represent complex system architectures or projects. 
+**D**esign **S**tructure **M**atrix (**DSM**), also called **D**ependency **S**tructure **M**atrix, is a simple and useful method to represent complex system architectures or projects.
 
 https://en.wikipedia.org/wiki/Design_structure_matrix
 
@@ -26,11 +26,11 @@ When you use this package, please type
 `julia> using DesignStructureMatrix`
 
 ## Displaying DSM
-you need to prepare adjacency matrix A for systems or projects.  
+you need to prepare adjacency matrix A for systems or projects.
 for example
 ```julia
 ##this is adjacency matrix
-A = [0 1 0 0 0 1 0; 
+A = [0 1 0 0 0 1 0;
     0 0 0 1 0 0 0;
     1 0 0 0 0 0 1;
     0 0 0 0 1 0 0;
@@ -132,15 +132,15 @@ original_DSM = [0 0 0 0 0 0 0 0 0 0 0 0 0;
                 0 0 1 1 1 0 0 1 0 1 0 0 1;
                 0 0 0 0 0 0 0 0 0 0 0 0 1;
                 0 1 1 1 1 0 1 1 1 1 1 1 0];
-        
 
-original_label = ["1", "2", "3", "4", "5", "6", "7", "8", 
+
+original_label = ["1", "2", "3", "4", "5", "6", "7", "8",
                 "9", "10", "11", "12", "13"];
 
 plotDSM(original_DSM,original_label)
 
 ```
-original DSM 
+original DSM
 
 ![SequencingoriginalDSM](https://user-images.githubusercontent.com/35882132/59393683-9cc1f800-8db7-11e9-9bb5-f2af79c7f7e9.png)
 
@@ -160,14 +160,14 @@ then, you get sequenced DSM
 
 ## Future
 
-* Improve plotting DSM 
+* Improve plotting DSM
 * Implement Other algorithm for clustering DSM
 * Implement Other algorithm for sequencing DSM
 * Display **D**omain **M**apping **M**atrices (**DMMs**), and **M**ulti**D**omain **M**atrices (**MDMs**)
 
 ## Dependency packages
 * Gadfly.jl
-* LinearLinearAlgebra.jl
+* LinearAlgebra.jl
 
 
 ## Reference
