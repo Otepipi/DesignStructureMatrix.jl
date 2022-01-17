@@ -19,7 +19,7 @@ For now, plotting DSM, clustering DSM and sequencing DSM are available.
 
 In Pkg mode( Please hit `]`)
 
-`(v1.1) pkg> add DesignStructureMatrix`
+`(v1.7) pkg> add DesignStructureMatrix`
 
 When you use this package, please type
 
