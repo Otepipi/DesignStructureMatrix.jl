@@ -1,7 +1,7 @@
 name = "DesignStructureMatrix"
 uuid = "19401b82-8c43-11e9-36fe-e7e08b9911f1"
 authors = ["Otepipi"]
-version = "0.1.1"
+version = ""
 
 [deps]
 Gadfly = "c91e804a-d5a3-530f-b6f0-dfbca275c004"
