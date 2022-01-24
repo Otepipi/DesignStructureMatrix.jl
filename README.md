@@ -73,7 +73,7 @@ plotDSM(A,label)
 ```
 then
 
-![](https://user-images.githubusercontent.com/35882132/59391598-bf501300-8daf-11e9-923b-72509125d567.png)
+![](https://user-images.githubusercontent.com/35882132/150766189-c486a062-8723-4654-8a30-1aaa2455fdad.svg)
 
 
 ## Clustering DSM
@@ -97,7 +97,7 @@ plotDSM(original_DSM,original_label)
 ```
 original_DSM
 
-![ClusteroriginalDSM](https://user-images.githubusercontent.com/35882132/59392360-54eca200-8db2-11e9-8fa3-6062f31045e5.png)
+![ClusteroriginalDSM](https://user-images.githubusercontent.com/35882132/150766202-73f94b96-cef5-46df-a8f9-20ecf4175b44.svg)
 
 
 
@@ -111,7 +111,7 @@ plotDSM(clustered_DSM,clustered_label)
 ```
 then, you get clustered DSM
 
-![Clustered_DSM](https://user-images.githubusercontent.com/35882132/59392602-2cb17300-8db3-11e9-8ea3-3c3367ffc18d.png)
+![Clustered_DSM](https://user-images.githubusercontent.com/35882132/150766197-5260e5c0-3063-4709-97a9-3a4b3415671a.svg)
 
 ## Sequencing DSM
 
@@ -142,7 +142,7 @@ plotDSM(original_DSM,original_label)
 ```
 original DSM
 
-![SequencingoriginalDSM](https://user-images.githubusercontent.com/35882132/59393683-9cc1f800-8db7-11e9-9bb5-f2af79c7f7e9.png)
+![SequencingoriginalDSM](https://user-images.githubusercontent.com/35882132/150766204-9d85760c-98b4-4b59-ae11-f75ec4d199d8.svg)
 
 To get Sequenced DSM, please type
 
@@ -154,19 +154,18 @@ plotDSM(sequenced_DSM, sequenced_label)
 
 then, you get sequenced DSM
 
-![SequencedDSM](https://user-images.githubusercontent.com/35882132/59393832-2d003d00-8db8-11e9-9147-cad34b77a2c7.png)
+![SequencedDSM](https://user-images.githubusercontent.com/35882132/150766200-cb57710a-509d-48e5-acf3-450445198ca2.svg)
 
 
 
 ## Future
 
-* Improve plotting DSM
 * Implement Other algorithm for clustering DSM
 * Implement Other algorithm for sequencing DSM
 * Display **D**omain **M**apping **M**atrices (**DMMs**), and **M**ulti**D**omain **M**atrices (**MDMs**)
 
 ## Dependency packages
-* Gadfly.jl
+* Luxor.jl
 * LinearAlgebra.jl
 
 
