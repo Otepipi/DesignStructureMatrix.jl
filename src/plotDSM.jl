@@ -34,41 +34,36 @@ function plotDSM(DSM,label)
 
         CellSizeRow = min(50,450/(DSMr+5));
         CellSizeColumn = min(50,450/(DSMc+5));
-        t = Table(DSMr+1,DSMc+2, CellSizeRow, CellSizeColumn);
+        t = Table(DSMr+1,DSMc+1, CellSizeRow, CellSizeColumn);
 
         sethue("black")
 
         for r in 2 : DSMr+1
-            for c in 3 : DSMc+2
+            for c in 2 : DSMc+1
                 box(t[r,c], t.colwidths[t.currentcol], t.rowheights[t.currentrow], :stroke);
-                if r == c-1
+                if r == c
                     sethue("grey")
                     box(t[r,c], t.colwidths[t.currentcol], t.rowheights[t.currentrow], :fill);
                     sethue("white")
-                    fontsize(CellSizeColumn/2)
-                    text(string(r-1), t[r,c] ,halign=:center, valign=:middle);
+                    textfit(label[r-1], BoundingBox(box(t[r,c],CellSizeRow, CellSizeColumn)))
                     sethue("black")
                 end
 
-                if DSM[r-1,c-2] != 0
+                if DSM[r-1,c-1] != 0
                     circle(t[r,c], CellSizeColumn/3, :fill)
                 end
             end
         end
 
+
+
         for r in 1 : DSMr
-            text(string(r), t[1,r+2] ,halign=:center, valign=:middle)
+            textfit(label[r], BoundingBox(box(t[r+1,1],CellSizeRow, CellSizeColumn)))
         end
 
         for c in 1 : DSMc
-            text(string(c), t[c+1,2] ,halign=:center, valign=:middle)
+            textfit(label[c], BoundingBox(box(t[1,c+1],CellSizeRow, CellSizeColumn)))
         end
-
-        for c in 1 : DSMc
-            fontsize(min((CellSizeColumn/2)*(5/length(label[c])),CellSizeColumn/2))
-            text(string(label[c]), t[c+1,1] ,halign=:right, valign=:middle)
-        end
-
 
     end
 end

@@ -73,7 +73,7 @@ plotDSM(A,label)
 ```
 then
 
-![](https://user-images.githubusercontent.com/35882132/150766189-c486a062-8723-4654-8a30-1aaa2455fdad.svg)
+![](https://user-images.githubusercontent.com/35882132/150873248-843737c8-6619-4816-b54d-bec151d5ee69.svg)
 
 
 ## Clustering DSM
@@ -97,7 +97,7 @@ plotDSM(original_DSM,original_label)
 ```
 original_DSM
 
-![ClusteroriginalDSM](https://user-images.githubusercontent.com/35882132/150766202-73f94b96-cef5-46df-a8f9-20ecf4175b44.svg)
+![ClusteroriginalDSM](https://user-images.githubusercontent.com/35882132/150873257-5ccd5a7d-76ad-41e5-a98a-505f22266146.svg)
 
 
 
@@ -111,7 +111,7 @@ plotDSM(clustered_DSM,clustered_label)
 ```
 then, you get clustered DSM
 
-![Clustered_DSM](https://user-images.githubusercontent.com/35882132/150766197-5260e5c0-3063-4709-97a9-3a4b3415671a.svg)
+![Clustered_DSM](https://user-images.githubusercontent.com/35882132/150873258-69098483-9722-4b7c-ac24-cfc6e3675728.svg)
 
 ## Sequencing DSM
 
@@ -142,7 +142,7 @@ plotDSM(original_DSM,original_label)
 ```
 original DSM
 
-![SequencingoriginalDSM](https://user-images.githubusercontent.com/35882132/150766204-9d85760c-98b4-4b59-ae11-f75ec4d199d8.svg)
+![SequencingoriginalDSM](https://user-images.githubusercontent.com/35882132/150873259-5f4942f8-73bd-45ee-9fa2-34d6a006a4c6.svg)
 
 To get Sequenced DSM, please type
 
@@ -154,7 +154,7 @@ plotDSM(sequenced_DSM, sequenced_label)
 
 then, you get sequenced DSM
 
-![SequencedDSM](https://user-images.githubusercontent.com/35882132/150766200-cb57710a-509d-48e5-acf3-450445198ca2.svg)
+![SequencedDSM](https://user-images.githubusercontent.com/35882132/150873260-80546e4f-040d-4485-9c43-a79c821b89ea.svg)
 
 
 
